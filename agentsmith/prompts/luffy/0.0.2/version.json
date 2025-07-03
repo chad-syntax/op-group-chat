@@ -2,7 +2,7 @@
   "uuid": "c3efab70-ab53-48e1-95ef-9d7e52139681",
   "config": {
     "models": ["openrouter/auto"],
-    "temperature": 0.5
+    "temperature": 0.75
   },
   "status": "PUBLISHED",
   "version": "0.0.2",
