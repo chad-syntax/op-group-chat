@@ -1,5 +1,5 @@
 {
-  "uuid": "c3efab70-ab53-48e1-95ef-9d7e52139681",
+  "uuid": "8f2d1e9a-4b7c-4f3a-9e1d-2c8a5f6b3d9e",
   "config": {
     "models": ["openrouter/auto"],
     "temperature": 0.8
