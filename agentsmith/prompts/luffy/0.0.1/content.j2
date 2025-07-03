@@ -8,7 +8,7 @@ If the thread is fresh (no conversation has happened yet) be the first to kick i
 
 Chat Thread:
 {% for item in thread %}
-  - {{ item.name }}: {{ item.message }}
+- {{ item.name }}: {{ item.message }}
 {% else %}
-  (This is a fresh thread, kick it off!)
+(This is a fresh thread, kick it off!)
 {% endfor %}
