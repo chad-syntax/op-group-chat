@@ -1,0 +1,11 @@
+[
+  {
+    "name": "thread",
+    "type": "JSON",
+    "uuid": "a209cc00-62a7-4f2d-88a8-d7891bc76c72",
+    "required": true,
+    "created_at": "2025-07-03T18:28:50.379197+00:00",
+    "updated_at": "2025-07-03T18:28:50.379197+00:00",
+    "default_value": null
+  }
+]
