@@ -14,6 +14,15 @@ export type Agency = {
                 latest: { uuid: 'c3efab70-ab53-48e1-95ef-9d7e52139681'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string; variables: { 'thread': any } };
                 '0.0.1': { uuid: 'c3efab70-ab53-48e1-95ef-9d7e52139681'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string; variables: { thread: any } }
             }
+        };
+        'nami': {
+            uuid: 'f5b83c01-ada8-4a92-91f4-94d7b99ef52a';
+            name: 'Nami';
+            slug: 'nami';
+            versions: {
+                latest: { uuid: '83f5f516-84fd-4bcd-9d44-83ee0628ce28'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string; variables: { 'thread': any } };
+                '0.0.1': { uuid: '83f5f516-84fd-4bcd-9d44-83ee0628ce28'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string; variables: { thread: any } }
+            }
         }
     };
     globals: {}
