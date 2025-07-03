@@ -23,6 +23,15 @@ export type Agency = {
                 latest: { uuid: '83f5f516-84fd-4bcd-9d44-83ee0628ce28'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string; variables: { 'thread': any } };
                 '0.0.1': { uuid: '83f5f516-84fd-4bcd-9d44-83ee0628ce28'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string; variables: { thread: any } }
             }
+        };
+        'usopp': {
+            uuid: 'd0028f53-42b4-437c-8c89-e88dfa62003e';
+            name: 'Usopp';
+            slug: 'usopp';
+            versions: {
+                latest: { uuid: '53bc8b17-97bd-4d38-90ef-741d33e45620'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string; variables: { 'thread': any } };
+                '0.0.1': { uuid: '53bc8b17-97bd-4d38-90ef-741d33e45620'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string; variables: { thread: any } }
+            }
         }
     };
     globals: {}
