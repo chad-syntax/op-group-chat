@@ -1,0 +1,33 @@
+{
+  "name": "op-group-chat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx start.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chad-syntax/op-group-chat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chad-syntax/op-group-chat/issues"
+  },
+  "homepage": "https://github.com/chad-syntax/op-group-chat#readme",
+  "description": "",
+  "dependencies": {
+    "tsx": "^4.20.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@types/node": "^24.0.3",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.25.0",
+    "globals": "^16.0.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.30.1"
+  }
+}
