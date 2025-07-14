@@ -8,82 +8,87 @@ const client = new AgentsmithClient<Agency>(apiKey, projectId, {
   logLevel: 'debug',
 });
 
-async function main() {
-  console.log('starting');
-  const { getPrompt } = client;
-  const luffy = await getPrompt('luffy');
+type ThreadMessage = {
+  name: string;
+  message: string;
+};
 
-  const result = await luffy.compile({
-    thread: [],
-  } as any);
-
-  console.log(result);
-  console.log('shutting down');
-  await client.shutdown();
-  console.log('shutdown complete');
-}
-
-main()
-  .catch(console.error)
-  .then(() => console.log('done'));
-
-// type ThreadMessage = {
-//   name: string;
-//   message: string;
-// };
-
-// const thread: ThreadMessage[] = [];
+const thread: ThreadMessage[] = [];
 
 // const luffy = await client.getPrompt('luffy');
 // const nami = await client.getPrompt('nami');
 // const usopp = await client.getPrompt('usopp');
 
-// let i = 0;
+const characters = [
+  'Luffy',
+  'Nami',
+  'Usopp',
+  'Zoro',
+  'Sanji',
+  'Chopper',
+  'Robin',
+  'Franky',
+  'Brook',
+  'Jinbe',
+];
 
-// while (i < 10) {
-//   // const result = await luffy.execute({
-//   //   thread,
-//   // } as any); // TODO: fix this
+let i = 0;
 
-//   // console.log(result);
+while (i < 10) {
+  // const character = characters[i];
+  const prompt = await client.getPrompt('op-character');
+  const characterResponses = await Promise.all(
+    characters.map(async (character) => {
+      const { content } = await prompt.execute({
+        thread,
+        name: character,
+      });
 
-//   const names = ['luffy', 'nami', 'usopp'];
+      return {
+        character,
+        content,
+      };
+    })
+  );
+  console.log('characterResponses', characterResponses);
+  // const result = await prompt.execute({
+  //   thread,
+  //   name: character,
+  // });
+  // const result = await luffy.execute({
+  //   thread,
+  // } as any); // TODO: fix this
+  // console.log(result);
+  // const names = ['luffy', 'nami', 'usopp'];
+  // const responses = await Promise.all([
+  //   luffy.execute({
+  //     thread,
+  //   }),
+  //   nami.execute({
+  //     thread,
+  //   }),
+  //   usopp.execute({
+  //     thread,
+  //   }),
+  // ]);
+  const actualResponses = characterResponses.filter(
+    (r) => r.content !== null && r.content !== 'NO_RESPONSE'
+  );
 
-//   const responses = await Promise.all([
-//     luffy.execute({
-//       thread,
-//     } as any),
-//     nami.execute({
-//       thread,
-//     } as any),
-//     usopp.execute({
-//       thread,
-//     } as any),
-//   ]);
+  thread.push(
+    ...actualResponses.map((r) => ({
+      name: r.character,
+      message: r.content!,
+    }))
+  );
+  console.log('updated thread', thread);
 
-//   const actualResponses = responses
-//     .filter((r) => r.content && r.content !== 'NO_RESPONSE')
-//     .map((r) => r.content);
+  if (i > 3) {
+    break;
+  }
+  i++;
+}
 
-//   const randomActualResponseIndex = Math.floor(
-//     Math.random() * actualResponses.length
-//   );
-//   const randomActualResponse = actualResponses[randomActualResponseIndex];
-//   const randomName = names[randomActualResponseIndex];
+await client.shutdown();
 
-//   thread.push({
-//     name: randomName ?? '',
-//     message: randomActualResponse ?? '',
-//   });
-
-//   console.log(thread);
-
-//   if (i > 2) {
-//     break;
-//   }
-//   i++;
-// }
-
-// await client.shutdown();
-
-// // testing
+// testing
