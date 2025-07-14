@@ -5,59 +5,35 @@
 |--------------------------------------------|
 */
 export type Agency = {
-    prompts: {
-        'luffy': {
-            uuid: '942ad573-8419-4324-beeb-09aeb29d402e';
-            name: 'Luffy';
-            slug: 'luffy';
-            versions: {
-                latest: never;
-                '0.0.2': { uuid: '8f2d1e9a-4b7c-4f3a-9e1d-2c8a5f6b3d9e'; version: '0.0.2'; config: { "models": ["openrouter/auto"], "temperature": 0.8 }; content: string; variables: { thread: any } };
-                '0.0.1': { uuid: 'c3efab70-ab53-48e1-95ef-9d7e52139681'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string; variables: { thread: any } }
-            }
-        };
-        'nami': {
-            uuid: '9710d82f-29cc-4afa-9e46-ce3d8656b53c';
-            name: 'Nami';
-            slug: 'nami';
-            versions: {
-                latest: never;
-                '0.0.1': { uuid: '83f5f516-84fd-4bcd-9d44-83ee0628ce28'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string; variables: { thread: any } }
-            }
-        };
-        'usopp': {
-            uuid: '5d19d128-7ace-4b7c-9ee5-fe9af861195d';
-            name: 'Usopp';
-            slug: 'usopp';
-            versions: {
-                latest: never;
-                '0.0.1': { uuid: '53bc8b17-97bd-4d38-90ef-741d33e45620'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string; variables: { thread: any } }
-            }
-        };
-        'hello-world': {
-            uuid: '1b6891e1-2c7d-4844-87f9-26ee49990f20';
-            name: 'Hello World';
-            slug: 'hello-world';
-            versions: {
-                latest: { uuid: 'fecb92a8-77c3-44de-9645-e139cdcb2d42'; version: '3.0.0'; config: { "models": ["openrouter/auto"], "temperature": 0.5 }; content: string; variables: { 'name': string } };
-                '3.0.0': { uuid: 'fecb92a8-77c3-44de-9645-e139cdcb2d42'; version: '3.0.0'; config: { "models": ["openrouter/auto"], "temperature": 0.5 }; content: string; variables: { name: string } };
-                '2.0.0': { uuid: '6696c153-277d-4100-b89d-0cae233bffbd'; version: '2.0.0'; config: { "models": ["openrouter/auto"], "temperature": 0.75 }; content: string; variables: { name: string } };
-                '1.0.0': { uuid: '7bd4bdef-8375-4809-af3d-b994f307b5e5'; version: '1.0.0'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string; variables: { name: string } }
-            }
-        }
-    };
-    nami: {
-      uuid: 'f5b83c01-ada8-4a92-91f4-94d7b99ef52a';
-      name: 'Nami';
-      slug: 'nami';
+  prompts: {
+    luffy: {
+      uuid: '942ad573-8419-4324-beeb-09aeb29d402e';
+      name: 'Luffy';
+      slug: 'luffy';
       versions: {
-        latest: {
-          uuid: '83f5f516-84fd-4bcd-9d44-83ee0628ce28';
+        latest: never;
+        '0.0.2': {
+          uuid: '8f2d1e9a-4b7c-4f3a-9e1d-2c8a5f6b3d9e';
+          version: '0.0.2';
+          config: { models: ['openrouter/auto']; temperature: 0.8 };
+          content: string;
+          variables: { thread: any };
+        };
+        '0.0.1': {
+          uuid: 'c3efab70-ab53-48e1-95ef-9d7e52139681';
           version: '0.0.1';
           config: { models: ['openrouter/auto']; temperature: 1 };
           content: string;
           variables: { thread: any };
         };
+      };
+    };
+    nami: {
+      uuid: '9710d82f-29cc-4afa-9e46-ce3d8656b53c';
+      name: 'Nami';
+      slug: 'nami';
+      versions: {
+        latest: never;
         '0.0.1': {
           uuid: '83f5f516-84fd-4bcd-9d44-83ee0628ce28';
           version: '0.0.1';
@@ -68,23 +44,52 @@ export type Agency = {
       };
     };
     usopp: {
-      uuid: 'd0028f53-42b4-437c-8c89-e88dfa62003e';
+      uuid: '5d19d128-7ace-4b7c-9ee5-fe9af861195d';
       name: 'Usopp';
       slug: 'usopp';
       versions: {
-        latest: {
-          uuid: '53bc8b17-97bd-4d38-90ef-741d33e45620';
-          version: '0.0.1';
-          config: { models: ['openrouter/auto']; temperature: 1 };
-          content: string;
-          variables: { thread: any };
-        };
+        latest: never;
         '0.0.1': {
           uuid: '53bc8b17-97bd-4d38-90ef-741d33e45620';
           version: '0.0.1';
           config: { models: ['openrouter/auto']; temperature: 1 };
           content: string;
           variables: { thread: any };
+        };
+      };
+    };
+    'hello-world': {
+      uuid: '1b6891e1-2c7d-4844-87f9-26ee49990f20';
+      name: 'Hello World';
+      slug: 'hello-world';
+      versions: {
+        latest: {
+          uuid: 'fecb92a8-77c3-44de-9645-e139cdcb2d42';
+          version: '3.0.0';
+          config: { models: ['openrouter/auto']; temperature: 0.5 };
+          content: string;
+          variables: { name: string };
+        };
+        '3.0.0': {
+          uuid: 'fecb92a8-77c3-44de-9645-e139cdcb2d42';
+          version: '3.0.0';
+          config: { models: ['openrouter/auto']; temperature: 0.5 };
+          content: string;
+          variables: { name: string };
+        };
+        '2.0.0': {
+          uuid: '6696c153-277d-4100-b89d-0cae233bffbd';
+          version: '2.0.0';
+          config: { models: ['openrouter/auto']; temperature: 0.75 };
+          content: string;
+          variables: { name: string };
+        };
+        '1.0.0': {
+          uuid: '7bd4bdef-8375-4809-af3d-b994f307b5e5';
+          version: '1.0.0';
+          config: { models: ['openrouter/auto']; temperature: 1 };
+          content: string;
+          variables: { name: string };
         };
       };
     };
