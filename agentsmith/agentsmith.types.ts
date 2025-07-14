@@ -44,71 +44,16 @@ export type Agency = {
                 '2.0.0': { uuid: '6696c153-277d-4100-b89d-0cae233bffbd'; version: '2.0.0'; config: { "models": ["openrouter/auto"], "temperature": 0.75 }; content: string; variables: { name: string } };
                 '1.0.0': { uuid: '7bd4bdef-8375-4809-af3d-b994f307b5e5'; version: '1.0.0'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string; variables: { name: string } }
             }
+        };
+        'op-character': {
+            uuid: '7571a3b1-1aae-4057-b762-45a679969356';
+            name: 'One Piece Character';
+            slug: 'op-character';
+            versions: {
+                latest: { uuid: 'e8c1a2b3-5d6f-4e7a-8c9d-0b1a2c3d4e5f'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string };
+                '0.0.1': { uuid: 'e8c1a2b3-5d6f-4e7a-8c9d-0b1a2c3d4e5f'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string }
+            }
         }
     };
-    nami: {
-      uuid: 'f5b83c01-ada8-4a92-91f4-94d7b99ef52a';
-      name: 'Nami';
-      slug: 'nami';
-      versions: {
-        latest: {
-          uuid: '83f5f516-84fd-4bcd-9d44-83ee0628ce28';
-          version: '0.0.1';
-          config: { models: ['openrouter/auto']; temperature: 1 };
-          content: string;
-          variables: { thread: any };
-        };
-        '0.0.1': {
-          uuid: '83f5f516-84fd-4bcd-9d44-83ee0628ce28';
-          version: '0.0.1';
-          config: { models: ['openrouter/auto']; temperature: 1 };
-          content: string;
-          variables: { thread: any };
-        };
-      };
-    };
-    usopp: {
-      uuid: 'd0028f53-42b4-437c-8c89-e88dfa62003e';
-      name: 'Usopp';
-      slug: 'usopp';
-      versions: {
-        latest: {
-          uuid: '53bc8b17-97bd-4d38-90ef-741d33e45620';
-          version: '0.0.1';
-          config: { models: ['openrouter/auto']; temperature: 1 };
-          content: string;
-          variables: { thread: any };
-        };
-        '0.0.1': {
-          uuid: '53bc8b17-97bd-4d38-90ef-741d33e45620';
-          version: '0.0.1';
-          config: { models: ['openrouter/auto']; temperature: 1 };
-          content: string;
-          variables: { thread: any };
-        };
-      };
-    };
-    'op-character': {
-      uuid: 'b7e2c1d4-4f3a-4e2a-9c8b-2a1e5f7d3c9a';
-      name: 'One Piece Character';
-      slug: 'op-character';
-      versions: {
-        latest: {
-          uuid: 'e8c1a2b3-5d6f-4e7a-8c9d-0b1a2c3d4e5f';
-          version: '0.0.1';
-          config: { models: ['openrouter/auto']; temperature: 1 };
-          content: string;
-          variables: { thread: any; name: string };
-        };
-        '0.0.1': {
-          uuid: 'e8c1a2b3-5d6f-4e7a-8c9d-0b1a2c3d4e5f';
-          version: '0.0.1';
-          config: { models: ['openrouter/auto']; temperature: 1 };
-          content: string;
-          variables: { thread: any; name: string };
-        };
-      };
-    };
-  };
-  globals: {};
+    globals: {}
 };
