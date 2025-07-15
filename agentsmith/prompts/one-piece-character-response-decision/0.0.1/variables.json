@@ -16,14 +16,5 @@
     "created_at": "2025-07-15T03:46:35.248923+00:00",
     "updated_at": "2025-07-15T03:46:35.248923+00:00",
     "default_value": null
-  },
-  {
-    "name": "turnsWithoutResponses",
-    "type": "NUMBER",
-    "uuid": "e2b7a1d4-3c5e-4e2a-9f8b-7c6a2e5d1b9c",
-    "required": true,
-    "created_at": "2025-07-15T03:55:00.000000+00:00",
-    "updated_at": "2025-07-15T03:55:00.000000+00:00",
-    "default_value": null
   }
 ]
