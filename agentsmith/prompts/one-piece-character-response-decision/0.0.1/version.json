@@ -4,10 +4,46 @@
     "models": [
       "openrouter/auto"
     ],
-    "temperature": 1
+    "temperature": 1,
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "op_response_reason",
+        "schema": {
+          "type": "object",
+          "required": [
+            "reasons_to_respond",
+            "reasons_not_to_respond",
+            "score"
+          ],
+          "properties": {
+            "score": {
+              "type": "number",
+              "description": "score out of 10 determining how likely it would be that the character responds, 10 being most likely and 1 being least likely"
+            },
+            "reasons_to_respond": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "list of reasons why the character would respond to the thread"
+            },
+            "reasons_not_to_respond": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "list of reasons why the character would NOT respond to the thread"
+            }
+          },
+          "additionalProperties": false
+        },
+        "strict": true
+      }
+    }
   },
-  "status": "DRAFT",
+  "status": "PUBLISHED",
   "version": "0.0.1",
   "created_at": "2025-07-15T03:33:51.955637+00:00",
-  "updated_at": "2025-07-15T03:33:51.955637+00:00"
+  "updated_at": "2025-07-15T03:46:35.278652+00:00"
 }
