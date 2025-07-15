@@ -37,8 +37,11 @@ let i = 0;
 while (i < 10) {
   // const character = characters[i];
   const prompt = await client.getPrompt('op-character');
+  const characterCandidates = characters.filter((c) => {
+    return !thread.slice(0, 10).some((t) => t.name === c);
+  });
   const characterResponses = await Promise.all(
-    characters.map(async (character) => {
+    characterCandidates.map(async (character) => {
       const { content } = await prompt.execute({
         thread,
         name: character,
@@ -51,39 +54,24 @@ while (i < 10) {
     })
   );
   console.log('characterResponses', characterResponses);
-  // const result = await prompt.execute({
-  //   thread,
-  //   name: character,
-  // });
-  // const result = await luffy.execute({
-  //   thread,
-  // } as any); // TODO: fix this
-  // console.log(result);
-  // const names = ['luffy', 'nami', 'usopp'];
-  // const responses = await Promise.all([
-  //   luffy.execute({
-  //     thread,
-  //   }),
-  //   nami.execute({
-  //     thread,
-  //   }),
-  //   usopp.execute({
-  //     thread,
-  //   }),
-  // ]);
+
   const actualResponses = characterResponses.filter(
-    (r) => r.content !== null && r.content !== 'NO_RESPONSE'
+    (r) =>
+      r.content !== null &&
+      r.content.trim() !== '' &&
+      !r.content.includes('NO_RESPONSE')
   );
 
-  thread.push(
-    ...actualResponses.map((r) => ({
-      name: r.character,
-      message: r.content!,
-    }))
-  );
+  const randomResponse =
+    actualResponses[Math.floor(Math.random() * actualResponses.length)];
+
+  thread.push({
+    name: randomResponse.character,
+    message: randomResponse.content!,
+  });
   console.log('updated thread', thread);
 
-  if (i > 3) {
+  if (i > 2) {
     break;
   }
   i++;

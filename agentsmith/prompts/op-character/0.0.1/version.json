@@ -1,7 +1,7 @@
 {
   "uuid": "e8c1a2b3-5d6f-4e7a-8c9d-0b1a2c3d4e5f",
   "config": {
-    "models": ["openrouter/auto"],
+    "models": ["deepseek/deepseek-chat-v3-0324"],
     "temperature": 1
   },
   "status": "PUBLISHED",
