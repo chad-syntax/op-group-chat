@@ -50,7 +50,8 @@ export type Agency = {
             name: 'One Piece Character';
             slug: 'op-character';
             versions: {
-                latest: { uuid: 'e8c1a2b3-5d6f-4e7a-8c9d-0b1a2c3d4e5f'; version: '0.0.1'; config: { "models": ["google/gemini-2.5-flash-preview-05-20"], "temperature": 1 }; content: string };
+                latest: { uuid: '7d8101d6-aacf-415e-9e42-2a378ae99f3d'; version: '0.0.2'; config: { "models": ["google/gemini-2.5-flash-preview-05-20"], "temperature": 1 }; content: string; variables: { 'name': string; 'thread': any; 'startingScenario'?: string } };
+                '0.0.2': { uuid: '7d8101d6-aacf-415e-9e42-2a378ae99f3d'; version: '0.0.2'; config: { "models": ["google/gemini-2.5-flash-preview-05-20"], "temperature": 1 }; content: string; variables: { name: string; thread: any; startingScenario?: string } };
                 '0.0.1': { uuid: 'e8c1a2b3-5d6f-4e7a-8c9d-0b1a2c3d4e5f'; version: '0.0.1'; config: { "models": ["google/gemini-2.5-flash-preview-05-20"], "temperature": 1 }; content: string }
             }
         };
