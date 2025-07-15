@@ -78,61 +78,55 @@ let turnsWithoutResponses = 0;
 
 while (i < 20) {
   console.log(`TURN ${i}`, `turnsWithoutResponses: ${turnsWithoutResponses}`);
-  const characterResponseDecisions = await Promise.all(
-    characters.map(async (character) => {
-      try {
-        const { content } = await deciderPrompt.execute({
-          thread,
-          name: character,
-          turnsWithoutResponses,
-        });
-
-        let parsedContent: CharacterResponseDecision = {
-          reasons_to_respond: [],
-          reasons_not_to_respond: [],
-          score: 0,
-        };
-
-        try {
-          parsedContent = JSON.parse(content ?? '{}');
-        } catch (e) {
-          console.error('Error parsing content', e);
-          console.log('failed to parse content', content);
-        }
-
-        return {
-          character,
-          score: parsedContent?.score ?? 0,
-        };
-      } catch (e) {
-        console.error('Error executing deciderPrompt', e);
-        return {
-          character,
-          score: 0,
-        };
-      }
-    })
-  );
-
-  // console.log('characterResponseDecisions', characterResponseDecisions);
+  let characterResponseDecisions: { character: string; score: number }[] = [];
+  try {
+    const { content } = await deciderPrompt.execute({
+      thread,
+      turnsWithoutResponses,
+      characters,
+    });
+    let parsedContent: {
+      character: string;
+      score: number;
+      reasons_to_respond: string[];
+      reasons_not_to_respond: string[];
+    }[] = JSON.parse(content ?? '[]');
+    characterResponseDecisions = parsedContent.map(
+      (d: {
+        character: string;
+        score: number;
+        reasons_to_respond: string[];
+        reasons_not_to_respond: string[];
+      }) => ({
+        character: d.character,
+        score: d.score + turnsWithoutResponses * Math.random() * 2,
+      })
+    );
+  } catch (e) {
+    console.error('Error executing deciderPrompt', e);
+    characterResponseDecisions = characters.map((c: string) => ({
+      character: c,
+      score: 0,
+    }));
+  }
   console.log(
     'decisions: ',
     characterResponseDecisions
-      .map((d) => `(${d.character}: ${d.score})`)
+      .map(
+        (d: { character: string; score: number }) =>
+          `(${d.character}: ${d.score})`
+      )
       .join(' ')
   );
-
   const charactersThatShouldRespond = characterResponseDecisions
-    .filter((c) => c.score >= 5)
-    .map((c) => c.character);
-
+    .filter((c: { character: string; score: number }) => c.score >= 5)
+    .map((c: { character: string; score: number }) => c.character);
   const characterResponses = await Promise.all(
-    charactersThatShouldRespond.map(async (character) => {
+    charactersThatShouldRespond.map(async (character: string) => {
       const { content } = await prompt.execute({
         thread,
         name: character,
       });
-
       return {
         character,
         content,
