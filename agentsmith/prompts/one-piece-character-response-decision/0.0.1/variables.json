@@ -1,0 +1,20 @@
+[
+  {
+    "name": "name",
+    "type": "STRING",
+    "uuid": "352024c7-babc-4249-9547-96fa0ee746ea",
+    "required": true,
+    "created_at": "2025-07-15T03:46:35.248923+00:00",
+    "updated_at": "2025-07-15T03:46:35.248923+00:00",
+    "default_value": null
+  },
+  {
+    "name": "thread",
+    "type": "JSON",
+    "uuid": "9c7cfc95-5659-4a04-a220-b0e54c6db62d",
+    "required": true,
+    "created_at": "2025-07-15T03:46:35.248923+00:00",
+    "updated_at": "2025-07-15T03:46:35.248923+00:00",
+    "default_value": null
+  }
+]
