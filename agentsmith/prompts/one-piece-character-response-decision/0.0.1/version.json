@@ -1,9 +1,7 @@
 {
   "uuid": "c8f78af1-f67c-4cd7-922f-133279d893bb",
   "config": {
-    "models": [
-      "openrouter/auto"
-    ],
+    "models": ["google/gemini-2.5-flash-preview-05-20"],
     "temperature": 1,
     "response_format": {
       "type": "json_schema",
@@ -11,11 +9,7 @@
         "name": "op_response_reason",
         "schema": {
           "type": "object",
-          "required": [
-            "reasons_to_respond",
-            "reasons_not_to_respond",
-            "score"
-          ],
+          "required": ["reasons_to_respond", "reasons_not_to_respond", "score"],
           "properties": {
             "score": {
               "type": "number",
