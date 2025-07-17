@@ -34,7 +34,8 @@ export type PromptVariables__op_character__0_0_2 = {
 export type PromptVariables__one_piece_character_response_decision__0_0_2 = {
   characters: any;
   thread: any;
-  turnsWithoutResponses: number;
+  length: string;
+  turnsWithoutResponses: string;
 };
 export type PromptVariables__one_piece_character_response_decision__0_0_1 = {
   name: string;
@@ -181,7 +182,7 @@ export type Prompt__op_character = {
   };
 };
 export type PromptConfig__one_piece_character_response_decision__0_0_2 = {
-  models: ['google/gemini-2.5-flash-preview-05-20'];
+  models: ['google/gemini-2.5-flash-lite-preview-06-17'];
   temperature: number;
   response_format: {
     type: 'json_schema';
