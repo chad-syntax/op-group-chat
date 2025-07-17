@@ -299,7 +299,7 @@ export type Prompt__test_partial = {
   };
 };
 export type PromptConfig__test_include_partial__0_0_1 = {
-  models: ['openrouter/auto'];
+  models: ['google/gemini-2.5-flash-lite-preview-06-17'];
   temperature: number;
 };
 export type PromptVersion__test_include_partial__0_0_1 = {
