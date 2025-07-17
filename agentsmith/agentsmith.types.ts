@@ -39,7 +39,7 @@ export type Agency = {
             name: 'Hello World';
             slug: 'hello-world';
             versions: {
-                latest: { uuid: 'fecb92a8-77c3-44de-9645-e139cdcb2d42'; version: '3.0.0'; config: { "models": ["openrouter/auto"], "temperature": 0.5 }; content: string; variables: { 'name': string } };
+                latest: { uuid: 'fecb92a8-77c3-44de-9645-e139cdcb2d42'; version: '3.0.0'; config: { "models": ["openrouter/auto"], "temperature": 0.5 }; content: string; };
                 '3.0.0': { uuid: 'fecb92a8-77c3-44de-9645-e139cdcb2d42'; version: '3.0.0'; config: { "models": ["openrouter/auto"], "temperature": 0.5 }; content: string; variables: { name: string } };
                 '2.0.0': { uuid: '6696c153-277d-4100-b89d-0cae233bffbd'; version: '2.0.0'; config: { "models": ["openrouter/auto"], "temperature": 0.75 }; content: string; variables: { name: string } };
                 '1.0.0': { uuid: '7bd4bdef-8375-4809-af3d-b994f307b5e5'; version: '1.0.0'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string; variables: { name: string } }

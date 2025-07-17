@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsx start.ts"
+    "start": "tsx start.ts",
+    "tool-example": "tsx tool-example.ts"
   },
   "repository": {
     "type": "git",
