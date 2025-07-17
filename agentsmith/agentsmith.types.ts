@@ -64,6 +64,24 @@ export type Agency = {
                 '0.0.2': { uuid: '1b645389-23d4-4f4b-8c41-9075c4a64d7a'; version: '0.0.2'; config: { "models": ["google/gemini-2.5-flash-preview-05-20"], "temperature": 1, "response_format": { "type": "json_schema", "json_schema": { "name": "op_response_reasons", "schema": { "type": "array", "items": { "type": "object", "required": ["character", "reasons_to_respond", "reasons_not_to_respond", "score"], "properties": { "score": { "type": "number", "description": "score out of 10 determining how likely it would be that the character responds, 10 being most likely and 1 being least likely" }, "character": { "type": "string" }, "reasons_to_respond": { "type": "array", "items": { "type": "string" }, "description": "list of reasons why the character would respond to the thread" }, "reasons_not_to_respond": { "type": "array", "items": { "type": "string" }, "description": "list of reasons why the character would NOT respond to the thread" } }, "additionalProperties": false } }, "strict": true } } }; content: string; variables: { characters: any; thread: any; turnsWithoutResponses: number } };
                 '0.0.1': { uuid: 'c8f78af1-f67c-4cd7-922f-133279d893bb'; version: '0.0.1'; config: { "models": ["google/gemini-2.5-flash-preview-05-20"], "temperature": 1, "response_format": { "type": "json_schema", "json_schema": { "name": "op_response_reason", "schema": { "type": "object", "required": ["reasons_to_respond", "reasons_not_to_respond", "score"], "properties": { "score": { "type": "number", "description": "score out of 10 determining how likely it would be that the character responds, 10 being most likely and 1 being least likely" }, "reasons_to_respond": { "type": "array", "items": { "type": "string" }, "description": "list of reasons why the character would respond to the thread" }, "reasons_not_to_respond": { "type": "array", "items": { "type": "string" }, "description": "list of reasons why the character would NOT respond to the thread" } }, "additionalProperties": false }, "strict": true } } }; content: string; variables: { name: string; thread: any } }
             }
+        };
+        'test-partial': {
+            uuid: '25774872-a11c-4f3f-8be7-80dd41a37ace';
+            name: 'Test Partial';
+            slug: 'test-partial';
+            versions: {
+                latest: { uuid: 'b6e303d6-f6f6-4ce8-b5d3-354c73d4aa90'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string; variables: { 'color': string } };
+                '0.0.1': { uuid: 'b6e303d6-f6f6-4ce8-b5d3-354c73d4aa90'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string; variables: { color: string } }
+            }
+        };
+        'test-include-partial': {
+            uuid: '7a60b433-9933-46bf-858d-c3072ca15cf8';
+            name: 'Test Include Partial';
+            slug: 'test-include-partial';
+            versions: {
+                latest: { uuid: '8d9a27dc-49fd-4fde-a829-1e8aece3f88d'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string };
+                '0.0.1': { uuid: '8d9a27dc-49fd-4fde-a829-1e8aece3f88d'; version: '0.0.1'; config: { "models": ["openrouter/auto"], "temperature": 1 }; content: string }
+            }
         }
     };
     globals: {}
