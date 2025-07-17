@@ -18,12 +18,21 @@
     "default_value": null
   },
   {
+    "name": "length",
+    "type": "STRING",
+    "uuid": "67c1f95c-08ff-4ab3-9d97-109bcd7a50ed",
+    "required": true,
+    "created_at": "2025-07-17T19:35:33.50319+00:00",
+    "updated_at": "2025-07-17T19:35:33.50319+00:00",
+    "default_value": null
+  },
+  {
     "name": "turnsWithoutResponses",
-    "type": "NUMBER",
+    "type": "STRING",
     "uuid": "992f4e6b-2297-4a12-8633-3d2a065e8a99",
     "required": true,
     "created_at": "2025-07-20T03:46:35.248923+00:00",
-    "updated_at": "2025-07-20T03:46:35.248923+00:00",
+    "updated_at": "2025-07-17T19:35:33.545889+00:00",
     "default_value": null
   }
 ]
