@@ -31,15 +31,14 @@ export type PromptVariables__op_character__0_0_2 = {
   thread: any;
   startingScenario?: string;
 };
-export type PromptVariables__one_piece_character_response_decision__0_0_2 = {
-  characters: any;
-  thread: any;
-  length: string;
-  turnsWithoutResponses: string;
-};
 export type PromptVariables__one_piece_character_response_decision__0_0_1 = {
   name: string;
   thread: any;
+};
+export type PromptVariables__one_piece_character_response_decision__0_0_2 = {
+  characters: any;
+  thread: any;
+  turnsWithoutResponses: string;
 };
 export type PromptVariables__test_partial__0_0_1 = {
   color: string;
@@ -181,6 +180,48 @@ export type Prompt__op_character = {
     '0.0.2': PromptVersion__op_character__0_0_2;
   };
 };
+export type PromptConfig__one_piece_character_response_decision__0_0_1 = {
+  models: ['google/gemini-2.5-flash-preview-05-20'];
+  temperature: number;
+  response_format: {
+    type: 'json_schema';
+    json_schema: {
+      name: 'op_response_reason';
+      schema: {
+        type: 'object';
+        required: ['reasons_to_respond', 'reasons_not_to_respond', 'score'];
+        properties: {
+          score: {
+            type: 'number';
+            description: 'score out of 10 determining how likely it would be that the character responds, 10 being most likely and 1 being least likely';
+          };
+          reasons_to_respond: {
+            type: 'array';
+            items: {
+              type: 'string';
+            };
+            description: 'list of reasons why the character would respond to the thread';
+          };
+          reasons_not_to_respond: {
+            type: 'array';
+            items: {
+              type: 'string';
+            };
+            description: 'list of reasons why the character would NOT respond to the thread';
+          };
+        };
+        additionalProperties: false;
+      };
+      strict: true;
+    };
+  };
+};
+export type PromptVersion__one_piece_character_response_decision__0_0_1 = {
+  version: '0.0.1';
+  config: PromptConfig__one_piece_character_response_decision__0_0_1;
+  variables: PromptVariables__one_piece_character_response_decision__0_0_1;
+  content: string;
+};
 export type PromptConfig__one_piece_character_response_decision__0_0_2 = {
   models: ['google/gemini-2.5-flash-lite-preview-06-17'];
   temperature: number;
@@ -229,55 +270,13 @@ export type PromptVersion__one_piece_character_response_decision__0_0_2 = {
   variables: PromptVariables__one_piece_character_response_decision__0_0_2;
   content: string;
 };
-export type PromptConfig__one_piece_character_response_decision__0_0_1 = {
-  models: ['google/gemini-2.5-flash-preview-05-20'];
-  temperature: number;
-  response_format: {
-    type: 'json_schema';
-    json_schema: {
-      name: 'op_response_reason';
-      schema: {
-        type: 'object';
-        required: ['reasons_to_respond', 'reasons_not_to_respond', 'score'];
-        properties: {
-          score: {
-            type: 'number';
-            description: 'score out of 10 determining how likely it would be that the character responds, 10 being most likely and 1 being least likely';
-          };
-          reasons_to_respond: {
-            type: 'array';
-            items: {
-              type: 'string';
-            };
-            description: 'list of reasons why the character would respond to the thread';
-          };
-          reasons_not_to_respond: {
-            type: 'array';
-            items: {
-              type: 'string';
-            };
-            description: 'list of reasons why the character would NOT respond to the thread';
-          };
-        };
-        additionalProperties: false;
-      };
-      strict: true;
-    };
-  };
-};
-export type PromptVersion__one_piece_character_response_decision__0_0_1 = {
-  version: '0.0.1';
-  config: PromptConfig__one_piece_character_response_decision__0_0_1;
-  variables: PromptVariables__one_piece_character_response_decision__0_0_1;
-  content: string;
-};
 export type Prompt__one_piece_character_response_decision = {
   name: 'One Piece Character Response Decision';
   slug: 'one-piece-character-response-decision';
   versions: {
     latest: PromptVersion__one_piece_character_response_decision__0_0_2;
-    '0.0.2': PromptVersion__one_piece_character_response_decision__0_0_2;
     '0.0.1': PromptVersion__one_piece_character_response_decision__0_0_1;
+    '0.0.2': PromptVersion__one_piece_character_response_decision__0_0_2;
   };
 };
 export type PromptConfig__test_partial__0_0_1 = {
