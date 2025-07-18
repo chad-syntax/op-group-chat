@@ -38,7 +38,7 @@ export type PromptVariables__one_piece_character_response_decision__0_0_1 = {
 export type PromptVariables__one_piece_character_response_decision__0_0_2 = {
   characters: any;
   thread: any;
-  turnsWithoutResponses: string;
+  turnsWithoutResponses: number;
 };
 export type PromptVariables__test_partial__0_0_1 = {
   color: string;
