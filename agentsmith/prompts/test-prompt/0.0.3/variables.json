@@ -1,0 +1,38 @@
+[
+  {
+    "name": "foo",
+    "type": "NUMBER",
+    "uuid": "558fd0b8-62d6-437a-8362-40fb4b1fdab9",
+    "required": true,
+    "created_at": "2025-07-19T05:00:51.278931+00:00",
+    "updated_at": "2025-07-19T05:00:51.278931+00:00",
+    "default_value": null
+  },
+  {
+    "name": "quux",
+    "type": "STRING",
+    "uuid": "78b62327-2409-4d63-b860-117aa705429c",
+    "required": false,
+    "created_at": "2025-07-19T05:00:51.278931+00:00",
+    "updated_at": "2025-07-19T05:00:51.278931+00:00",
+    "default_value": "QUUX"
+  },
+  {
+    "name": "bar",
+    "type": "BOOLEAN",
+    "uuid": "df13c9c7-bc56-498c-a96b-9e8564007aac",
+    "required": false,
+    "created_at": "2025-07-19T05:00:51.278931+00:00",
+    "updated_at": "2025-07-19T05:22:12.266895+00:00",
+    "default_value": "true"
+  },
+  {
+    "name": "baz",
+    "type": "JSON",
+    "uuid": "fac5fbb3-4e76-402a-b0f0-a58cf606fa39",
+    "required": false,
+    "created_at": "2025-07-19T05:00:51.278931+00:00",
+    "updated_at": "2025-07-19T05:35:33.81697+00:00",
+    "default_value": "{\"asd\":\"asd\",\"items\":[\"a\",2,3]}"
+  }
+]

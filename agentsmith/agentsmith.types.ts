@@ -35,6 +35,16 @@ export type PromptVariables__one_piece_character_response_decision__0_0_1 = {
   name: string;
   thread: any;
 };
+export type PromptVariables__one_piece_character_response_decision__0_0_3 = {
+  characters: any;
+  thread: any;
+  turnsWithoutResponses: number;
+};
+export type PromptVariables__one_piece_character_response_decision__0_0_4 = {
+  characters: any;
+  thread: any;
+  turnsWithoutResponses?: number;
+};
 export type PromptVariables__one_piece_character_response_decision__0_0_2 = {
   characters: any;
   thread: any;
@@ -43,9 +53,22 @@ export type PromptVariables__one_piece_character_response_decision__0_0_2 = {
 export type PromptVariables__test_partial__0_0_1 = {
   color: string;
 };
+export type PromptVariables__test_include_partial__0_0_2 = {
+  name: string;
+  testVariable1: boolean;
+};
 export type PromptVariables__test_include_partial__0_0_1 = {
   name: string;
+  foo: string;
 };
+export type PromptVariables__test_prompt__0_0_2 = {};
+export type PromptVariables__test_prompt__0_0_3 = {
+  foo: number;
+  quux?: string;
+  bar?: boolean;
+  baz?: any;
+};
+export type PromptVariables__test_prompt__0_0_1 = {};
 export type PromptConfig__luffy__0_0_1 = {
   models: ['openrouter/auto'];
   temperature: number;
@@ -222,6 +245,102 @@ export type PromptVersion__one_piece_character_response_decision__0_0_1 = {
   variables: PromptVariables__one_piece_character_response_decision__0_0_1;
   content: string;
 };
+export type PromptConfig__one_piece_character_response_decision__0_0_3 = {
+  models: ['google/gemini-2.5-flash-lite-preview-06-17'];
+  temperature: number;
+  response_format: {
+    type: 'json_schema';
+    json_schema: {
+      name: 'op_response_reasons';
+      schema: {
+        type: 'array';
+        items: {
+          type: 'object';
+          required: ['character', 'reasons_to_respond', 'reasons_not_to_respond', 'score'];
+          properties: {
+            score: {
+              type: 'number';
+              description: 'score out of 10 determining how likely it would be that the character responds, 10 being most likely and 1 being least likely';
+            };
+            character: {
+              type: 'string';
+            };
+            reasons_to_respond: {
+              type: 'array';
+              items: {
+                type: 'string';
+              };
+              description: 'list of reasons why the character would respond to the thread';
+            };
+            reasons_not_to_respond: {
+              type: 'array';
+              items: {
+                type: 'string';
+              };
+              description: 'list of reasons why the character would NOT respond to the thread';
+            };
+          };
+          additionalProperties: false;
+        };
+      };
+      strict: true;
+    };
+  };
+};
+export type PromptVersion__one_piece_character_response_decision__0_0_3 = {
+  version: '0.0.3';
+  config: PromptConfig__one_piece_character_response_decision__0_0_3;
+  variables: PromptVariables__one_piece_character_response_decision__0_0_3;
+  content: string;
+};
+export type PromptConfig__one_piece_character_response_decision__0_0_4 = {
+  models: ['google/gemini-2.5-flash-lite-preview-06-17'];
+  temperature: number;
+  response_format: {
+    type: 'json_schema';
+    json_schema: {
+      name: 'op_response_reasons';
+      schema: {
+        type: 'array';
+        items: {
+          type: 'object';
+          required: ['character', 'reasons_to_respond', 'reasons_not_to_respond', 'score'];
+          properties: {
+            score: {
+              type: 'number';
+              description: 'score out of 10 determining how likely it would be that the character responds, 10 being most likely and 1 being least likely';
+            };
+            character: {
+              type: 'string';
+            };
+            reasons_to_respond: {
+              type: 'array';
+              items: {
+                type: 'string';
+              };
+              description: 'list of reasons why the character would respond to the thread';
+            };
+            reasons_not_to_respond: {
+              type: 'array';
+              items: {
+                type: 'string';
+              };
+              description: 'list of reasons why the character would NOT respond to the thread';
+            };
+          };
+          additionalProperties: false;
+        };
+      };
+      strict: true;
+    };
+  };
+};
+export type PromptVersion__one_piece_character_response_decision__0_0_4 = {
+  version: '0.0.4';
+  config: PromptConfig__one_piece_character_response_decision__0_0_4;
+  variables: PromptVariables__one_piece_character_response_decision__0_0_4;
+  content: string;
+};
 export type PromptConfig__one_piece_character_response_decision__0_0_2 = {
   models: ['google/gemini-2.5-flash-lite-preview-06-17'];
   temperature: number;
@@ -276,6 +395,8 @@ export type Prompt__one_piece_character_response_decision = {
   versions: {
     latest: PromptVersion__one_piece_character_response_decision__0_0_2;
     '0.0.1': PromptVersion__one_piece_character_response_decision__0_0_1;
+    '0.0.3': PromptVersion__one_piece_character_response_decision__0_0_3;
+    '0.0.4': PromptVersion__one_piece_character_response_decision__0_0_4;
     '0.0.2': PromptVersion__one_piece_character_response_decision__0_0_2;
   };
 };
@@ -297,6 +418,19 @@ export type Prompt__test_partial = {
     '0.0.1': PromptVersion__test_partial__0_0_1;
   };
 };
+export type PromptConfig__test_include_partial__0_0_2 = {
+  models: ['google/gemini-2.5-flash-lite-preview-06-17'];
+  temperature: number;
+};
+export type PromptVersion__test_include_partial__0_0_2 = {
+  version: '0.0.2';
+  config: PromptConfig__test_include_partial__0_0_2;
+  variables: PromptVariables__test_include_partial__0_0_2 &
+    PromptVariables__op_character__0_0_2 &
+    PromptVariables__test_partial__0_0_1 &
+    PromptVariables__hello_world__3_0_0;
+  content: string;
+};
 export type PromptConfig__test_include_partial__0_0_1 = {
   models: ['google/gemini-2.5-flash-lite-preview-06-17'];
   temperature: number;
@@ -315,7 +449,48 @@ export type Prompt__test_include_partial = {
   slug: 'test-include-partial';
   versions: {
     latest: PromptVersion__test_include_partial__0_0_1;
+    '0.0.2': PromptVersion__test_include_partial__0_0_2;
     '0.0.1': PromptVersion__test_include_partial__0_0_1;
+  };
+};
+export type PromptConfig__test_prompt__0_0_2 = {
+  models: ['openrouter/auto'];
+  temperature: number;
+};
+export type PromptVersion__test_prompt__0_0_2 = {
+  version: '0.0.2';
+  config: PromptConfig__test_prompt__0_0_2;
+  variables: PromptVariables__test_prompt__0_0_2;
+  content: string;
+};
+export type PromptConfig__test_prompt__0_0_3 = {
+  models: ['openrouter/auto'];
+  temperature: number;
+};
+export type PromptVersion__test_prompt__0_0_3 = {
+  version: '0.0.3';
+  config: PromptConfig__test_prompt__0_0_3;
+  variables: PromptVariables__test_prompt__0_0_3;
+  content: string;
+};
+export type PromptConfig__test_prompt__0_0_1 = {
+  models: ['openrouter/auto'];
+  temperature: number;
+};
+export type PromptVersion__test_prompt__0_0_1 = {
+  version: '0.0.1';
+  config: PromptConfig__test_prompt__0_0_1;
+  variables: PromptVariables__test_prompt__0_0_1;
+  content: string;
+};
+export type Prompt__test_prompt = {
+  name: 'Test Prompt';
+  slug: 'test-prompt';
+  versions: {
+    latest: PromptVersion__test_prompt__0_0_2;
+    '0.0.2': PromptVersion__test_prompt__0_0_2;
+    '0.0.3': PromptVersion__test_prompt__0_0_3;
+    '0.0.1': PromptVersion__test_prompt__0_0_1;
   };
 };
 export type Globals = {
@@ -331,6 +506,7 @@ export type Agency = {
     'one-piece-character-response-decision': Prompt__one_piece_character_response_decision;
     'test-partial': Prompt__test_partial;
     'test-include-partial': Prompt__test_include_partial;
+    'test-prompt': Prompt__test_prompt;
   };
   globals: Globals;
 };

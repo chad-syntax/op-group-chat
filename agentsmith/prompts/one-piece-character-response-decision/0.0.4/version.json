@@ -1,5 +1,5 @@
 {
-  "uuid": "1b645389-23d4-4f4b-8c41-9075c4a64d7a",
+  "uuid": "719ac721-6f26-4c14-82d5-dd3a829e36e0",
   "config": {
     "models": [
       "google/gemini-2.5-flash-lite-preview-06-17"
@@ -49,8 +49,8 @@
       }
     }
   },
-  "status": "PUBLISHED",
-  "version": "0.0.2",
-  "created_at": "2025-07-15T16:46:38.860327+00:00",
-  "updated_at": "2025-07-18T01:28:40.98991+00:00"
+  "status": "DRAFT",
+  "version": "0.0.4",
+  "created_at": "2025-07-18T19:23:14.401452+00:00",
+  "updated_at": "2025-07-18T19:49:26.49548+00:00"
 }
