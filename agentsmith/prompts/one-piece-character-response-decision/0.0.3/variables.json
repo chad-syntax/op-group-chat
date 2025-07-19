@@ -1,0 +1,29 @@
+[
+  {
+    "name": "characters",
+    "type": "JSON",
+    "uuid": "1f7eeff1-cdb2-4c89-97cf-f3b1a3b0c8e8",
+    "required": true,
+    "created_at": "2025-07-20T03:46:35.248923+00:00",
+    "updated_at": "2025-07-20T03:46:35.248923+00:00",
+    "default_value": null
+  },
+  {
+    "name": "thread",
+    "type": "JSON",
+    "uuid": "1f035cbf-97f2-487a-af41-e0ab87804516",
+    "required": true,
+    "created_at": "2025-07-20T03:46:35.248923+00:00",
+    "updated_at": "2025-07-20T03:46:35.248923+00:00",
+    "default_value": null
+  },
+  {
+    "name": "turnsWithoutResponses",
+    "type": "NUMBER",
+    "uuid": "855acc68-54af-4b85-bbcc-b034923f6874",
+    "required": true,
+    "created_at": "2025-07-20T03:46:35.248923+00:00",
+    "updated_at": "2025-07-18T01:28:31.109369+00:00",
+    "default_value": null
+  }
+]
