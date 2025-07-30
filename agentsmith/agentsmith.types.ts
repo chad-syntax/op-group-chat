@@ -51,32 +51,6 @@ export type PromptVariables__op_character__0_0_2 = {
   startingScenario?: string;
 };
 export type PromptVariables__op_character__0_0_1 = never;
-export type PromptVariables__prompt_a__0_0_1 = never;
-export type PromptVariables__prompt_b__0_0_1 = {
-  bar: string;
-};
-export type PromptVariables__test_include_partial__0_0_2 = {
-  name: string;
-  testVariable1: boolean;
-};
-export type PromptVariables__test_include_partial__0_0_1 = {
-  name: string;
-  foo: string;
-};
-export type PromptVariables__test_partial__0_0_1 = {
-  color: string;
-};
-export type PromptVariables__test_prompt__0_0_3 = {
-  foo: number;
-  quux?: string;
-  bar?: boolean;
-  baz?: any;
-};
-export type PromptVariables__test_prompt__0_0_2 = never;
-export type PromptVariables__test_prompt__0_0_1 = never;
-export type PromptVariables__usopp__0_0_1 = {
-  thread: any;
-};
 export type PromptConfig__hello_world__3_0_2 = {
   models: ['deepseek/deepseek-r1'];
   stream: true;
@@ -96,7 +70,7 @@ export type PromptConfig__hello_world__3_0_1 = {
 export type PromptVersion__hello_world__3_0_1 = {
   version: '3.0.1';
   config: PromptConfig__hello_world__3_0_1;
-  variables: PromptVariables__hello_world__3_0_1 & PromptVariables__prompt_b__0_0_1;
+  variables: PromptVariables__hello_world__3_0_1;
   content: string;
 };
 export type PromptConfig__hello_world__3_0_0 = {
@@ -133,7 +107,7 @@ export type Prompt__hello_world = {
   name: 'Hello World';
   slug: 'hello-world';
   versions: {
-    latest: PromptVersion__hello_world__3_0_0;
+    latest: never;
     '3.0.2': PromptVersion__hello_world__3_0_2;
     '3.0.1': PromptVersion__hello_world__3_0_1;
     '3.0.0': PromptVersion__hello_world__3_0_0;
@@ -414,147 +388,6 @@ export type Prompt__op_character = {
     '0.0.1': PromptVersion__op_character__0_0_1;
   };
 };
-export type PromptConfig__prompt_a__0_0_1 = {
-  models: ['openrouter/auto'];
-  temperature: number;
-};
-export type PromptVersion__prompt_a__0_0_1 = {
-  version: '0.0.1';
-  config: PromptConfig__prompt_a__0_0_1;
-  variables: PromptVariables__prompt_a__0_0_1;
-  content: string;
-};
-export type Prompt__prompt_a = {
-  name: 'Prompt A';
-  slug: 'prompt-a';
-  versions: {
-    latest: PromptVersion__prompt_a__0_0_1;
-    '0.0.1': PromptVersion__prompt_a__0_0_1;
-  };
-};
-export type PromptConfig__prompt_b__0_0_1 = {
-  models: ['openrouter/auto'];
-  temperature: number;
-};
-export type PromptVersion__prompt_b__0_0_1 = {
-  version: '0.0.1';
-  config: PromptConfig__prompt_b__0_0_1;
-  variables: PromptVariables__prompt_b__0_0_1;
-  content: string;
-};
-export type Prompt__prompt_b = {
-  name: 'Prompt B';
-  slug: 'prompt-b';
-  versions: {
-    latest: PromptVersion__prompt_b__0_0_1;
-    '0.0.1': PromptVersion__prompt_b__0_0_1;
-  };
-};
-export type PromptConfig__test_include_partial__0_0_2 = {
-  models: ['google/gemini-2.5-flash-lite-preview-06-17'];
-  temperature: number;
-};
-export type PromptVersion__test_include_partial__0_0_2 = {
-  version: '0.0.2';
-  config: PromptConfig__test_include_partial__0_0_2;
-  variables: PromptVariables__test_include_partial__0_0_2;
-  content: string;
-};
-export type PromptConfig__test_include_partial__0_0_1 = {
-  models: ['google/gemini-2.5-flash-lite-preview-06-17'];
-  temperature: number;
-};
-export type PromptVersion__test_include_partial__0_0_1 = {
-  version: '0.0.1';
-  config: PromptConfig__test_include_partial__0_0_1;
-  variables: PromptVariables__test_include_partial__0_0_1;
-  content: string;
-};
-export type Prompt__test_include_partial = {
-  name: 'Test Include Partial';
-  slug: 'test-include-partial';
-  versions: {
-    latest: never;
-    '0.0.2': PromptVersion__test_include_partial__0_0_2;
-    '0.0.1': PromptVersion__test_include_partial__0_0_1;
-  };
-};
-export type PromptConfig__test_partial__0_0_1 = {
-  models: ['openrouter/auto'];
-  temperature: number;
-};
-export type PromptVersion__test_partial__0_0_1 = {
-  version: '0.0.1';
-  config: PromptConfig__test_partial__0_0_1;
-  variables: PromptVariables__test_partial__0_0_1;
-  content: string;
-};
-export type Prompt__test_partial = {
-  name: 'Test Partial';
-  slug: 'test-partial';
-  versions: {
-    latest: never;
-    '0.0.1': PromptVersion__test_partial__0_0_1;
-  };
-};
-export type PromptConfig__test_prompt__0_0_3 = {
-  models: ['openrouter/auto'];
-  temperature: number;
-};
-export type PromptVersion__test_prompt__0_0_3 = {
-  version: '0.0.3';
-  config: PromptConfig__test_prompt__0_0_3;
-  variables: PromptVariables__test_prompt__0_0_3;
-  content: string;
-};
-export type PromptConfig__test_prompt__0_0_2 = {
-  models: ['openrouter/auto'];
-  temperature: number;
-};
-export type PromptVersion__test_prompt__0_0_2 = {
-  version: '0.0.2';
-  config: PromptConfig__test_prompt__0_0_2;
-  variables: PromptVariables__test_prompt__0_0_2;
-  content: string;
-};
-export type PromptConfig__test_prompt__0_0_1 = {
-  models: ['openrouter/auto'];
-  temperature: number;
-};
-export type PromptVersion__test_prompt__0_0_1 = {
-  version: '0.0.1';
-  config: PromptConfig__test_prompt__0_0_1;
-  variables: PromptVariables__test_prompt__0_0_1;
-  content: string;
-};
-export type Prompt__test_prompt = {
-  name: 'Test Prompt';
-  slug: 'test-prompt';
-  versions: {
-    latest: never;
-    '0.0.3': PromptVersion__test_prompt__0_0_3;
-    '0.0.2': PromptVersion__test_prompt__0_0_2;
-    '0.0.1': PromptVersion__test_prompt__0_0_1;
-  };
-};
-export type PromptConfig__usopp__0_0_1 = {
-  models: ['openrouter/auto'];
-  temperature: number;
-};
-export type PromptVersion__usopp__0_0_1 = {
-  version: '0.0.1';
-  config: PromptConfig__usopp__0_0_1;
-  variables: PromptVariables__usopp__0_0_1;
-  content: string;
-};
-export type Prompt__usopp = {
-  name: 'Usopp';
-  slug: 'usopp';
-  versions: {
-    latest: never;
-    '0.0.1': PromptVersion__usopp__0_0_1;
-  };
-};
 export type Globals = {};
 export type Agency = {
   prompts: {
@@ -563,12 +396,6 @@ export type Agency = {
     nami: Prompt__nami;
     'one-piece-character-response-decision': Prompt__one_piece_character_response_decision;
     'op-character': Prompt__op_character;
-    'prompt-a': Prompt__prompt_a;
-    'prompt-b': Prompt__prompt_b;
-    'test-include-partial': Prompt__test_include_partial;
-    'test-partial': Prompt__test_partial;
-    'test-prompt': Prompt__test_prompt;
-    usopp: Prompt__usopp;
   };
   globals: Globals;
 };
