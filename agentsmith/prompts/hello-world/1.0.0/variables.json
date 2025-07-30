@@ -2,10 +2,10 @@
   {
     "name": "name",
     "type": "STRING",
-    "uuid": "cbcbb642-2382-486b-9015-718c319efb28",
+    "uuid": "480fa251-f7e0-4968-84d1-dec4abaf69a9",
     "required": true,
-    "created_at": "2025-07-07T19:36:17.198299+00:00",
-    "updated_at": "2025-07-07T19:36:17.198299+00:00",
+    "created_at": "2025-07-22T18:53:17.16685+00:00",
+    "updated_at": "2025-07-22T18:53:17.16685+00:00",
     "default_value": null
   }
 ]
