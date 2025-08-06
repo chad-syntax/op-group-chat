@@ -337,7 +337,7 @@ export type PromptVersion__prompt_a__0_0_1 = {
   content: string;
 };
 export type Prompt__prompt_a = {
-  name: 'Prompt A';
+  name: 'prompt A';
   slug: 'prompt-a';
   versions: {
     latest: never;
