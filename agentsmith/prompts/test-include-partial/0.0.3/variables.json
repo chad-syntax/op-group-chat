@@ -1,0 +1,11 @@
+[
+  {
+    "name": "name",
+    "type": "STRING",
+    "uuid": "325741e8-e135-4cee-8987-004af637cd5d",
+    "required": true,
+    "created_at": "2025-07-17T18:48:05.764121+00:00",
+    "updated_at": "2025-07-17T18:48:05.764121+00:00",
+    "default_value": null
+  }
+]
