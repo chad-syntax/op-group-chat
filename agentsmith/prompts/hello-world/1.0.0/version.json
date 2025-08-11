@@ -4,10 +4,10 @@
     "models": [
       "openrouter/auto"
     ],
-    "temperature": 1
+    "temperature": 0
   },
-  "status": "PUBLISHED",
+  "status": "DRAFT",
   "version": "1.0.0",
-  "created_at": "2025-07-07T19:36:17.198299+00:00",
-  "updated_at": "2025-07-07T19:36:17.198299+00:00"
+  "created_at": "2025-08-06T13:46:20.138416+00:00",
+  "updated_at": "2025-08-11T15:56:30.926922+00:00"
 }
