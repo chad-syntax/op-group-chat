@@ -1,0 +1,14 @@
+{
+  "uuid": "42537d1f-6b07-482b-874f-5c2d86861283",
+  "config": {
+    "models": [
+      "qwen/qwen3-30b-a3b-instruct-2507"
+    ],
+    "stream": true,
+    "temperature": 0.46
+  },
+  "status": "DRAFT",
+  "version": "0.0.4",
+  "created_at": "2025-08-08T20:58:08.565661+00:00",
+  "updated_at": "2025-08-08T20:58:08.565661+00:00"
+}
