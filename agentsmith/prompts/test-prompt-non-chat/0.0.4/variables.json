@@ -1,0 +1,11 @@
+[
+  {
+    "name": "alignment",
+    "type": "STRING",
+    "uuid": "165d9b13-b3de-4b35-8361-48ac4a4fbc21",
+    "required": true,
+    "created_at": "2025-08-08T21:08:16.045834+00:00",
+    "updated_at": "2025-08-08T21:08:16.045834+00:00",
+    "default_value": null
+  }
+]
