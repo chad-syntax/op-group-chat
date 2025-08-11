@@ -5,7 +5,7 @@
 |--------------------------------------------|
 */
 export type PromptVariables__chat_prompt__0_0_1 = {
-  kind: string;
+  letter: string;
 };
 export type PromptConfig__chat_prompt__0_0_1 = {
   models: ['openrouter/auto'];
