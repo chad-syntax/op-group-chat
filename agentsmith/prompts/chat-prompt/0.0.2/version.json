@@ -1,0 +1,16 @@
+{
+  "uuid": "aebd6d98-c701-418c-8028-836d67632d0d",
+  "config": {
+    "models": [
+      "qwen/qwen3-30b-a3b-instruct-2507",
+      "deepseek/deepseek-r1-0528:free",
+      "openai/gpt-5"
+    ],
+    "stream": true,
+    "temperature": 0.46
+  },
+  "status": "DRAFT",
+  "version": "0.0.2",
+  "created_at": "2025-08-08T17:50:59.921009+00:00",
+  "updated_at": "2025-08-08T17:50:59.921009+00:00"
+}
