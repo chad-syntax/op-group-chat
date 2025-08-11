@@ -1,0 +1,13 @@
+{
+  "uuid": "aae1d71f-0d19-4a66-b36d-60f9fabe75fe",
+  "config": {
+    "models": [
+      "moonshotai/kimi-k2"
+    ],
+    "temperature": 0.38
+  },
+  "status": "DRAFT",
+  "version": "0.0.2",
+  "created_at": "2025-08-08T21:37:27.499963+00:00",
+  "updated_at": "2025-08-08T21:42:18.148607+00:00"
+}
