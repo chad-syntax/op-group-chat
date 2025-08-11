@@ -7,6 +7,9 @@
 export type PromptVariables__chat_prompt__0_0_1 = {
   thing: string;
 };
+export type PromptVariables__non_chat_prompt__0_0_1 = {
+  color: string;
+};
 export type PromptConfig__chat_prompt__0_0_1 = {
   models: ['openrouter/auto'];
 };
@@ -24,10 +27,28 @@ export type Prompt__chat_prompt = {
     '0.0.1': PromptVersion__chat_prompt__0_0_1;
   };
 };
+export type PromptConfig__non_chat_prompt__0_0_1 = {
+  models: ['openrouter/auto'];
+};
+export type PromptVersion__non_chat_prompt__0_0_1 = {
+  version: '0.0.1';
+  config: PromptConfig__non_chat_prompt__0_0_1;
+  variables: PromptVariables__non_chat_prompt__0_0_1;
+  content: string;
+};
+export type Prompt__non_chat_prompt = {
+  name: 'non-chat prompt';
+  slug: 'non-chat-prompt';
+  versions: {
+    latest: never;
+    '0.0.1': PromptVersion__non_chat_prompt__0_0_1;
+  };
+};
 export type Globals = {};
 export type Agency = {
   prompts: {
     'chat-prompt': Prompt__chat_prompt;
+    'non-chat-prompt': Prompt__non_chat_prompt;
   };
   globals: Globals;
 };
