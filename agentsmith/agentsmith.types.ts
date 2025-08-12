@@ -15,7 +15,6 @@ export type PromptVariables__non_chat_prompt__0_0_1 = {
 };
 export type PromptConfig__chat_prompt__0_0_2 = {
   models: ['openrouter/auto'];
-  stream: true;
 };
 export type PromptVersion__chat_prompt__0_0_2 = {
   version: '0.0.2';
