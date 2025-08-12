@@ -19,6 +19,7 @@ export type PromptConfig__chat_prompt__0_0_2 = {
 export type PromptVersion__chat_prompt__0_0_2 = {
   version: '0.0.2';
   config: PromptConfig__chat_prompt__0_0_2;
+  type: 'CHAT';
   variables: PromptVariables__chat_prompt__0_0_2;
   content: string;
 };
@@ -28,6 +29,7 @@ export type PromptConfig__chat_prompt__0_0_1 = {
 export type PromptVersion__chat_prompt__0_0_1 = {
   version: '0.0.1';
   config: PromptConfig__chat_prompt__0_0_1;
+  type: 'CHAT';
   variables: PromptVariables__chat_prompt__0_0_1;
   content: string;
 };
@@ -46,6 +48,7 @@ export type PromptConfig__non_chat_prompt__0_0_1 = {
 export type PromptVersion__non_chat_prompt__0_0_1 = {
   version: '0.0.1';
   config: PromptConfig__non_chat_prompt__0_0_1;
+  type: 'NON_CHAT';
   variables: PromptVariables__non_chat_prompt__0_0_1;
   content: string;
 };
