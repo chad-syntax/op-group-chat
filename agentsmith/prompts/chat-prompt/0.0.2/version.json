@@ -4,11 +4,10 @@
   "config": {
     "models": [
       "openrouter/auto"
-    ],
-    "stream": true
+    ]
   },
   "status": "DRAFT",
   "version": "0.0.2",
   "created_at": "2025-08-12T17:21:58.243077+00:00",
-  "updated_at": "2025-08-12T20:11:11.00582+00:00"
+  "updated_at": "2025-08-12T20:12:33.771598+00:00"
 }
