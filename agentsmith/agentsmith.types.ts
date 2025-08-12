@@ -20,7 +20,7 @@ export type PromptVersion__chat_prompt__0_0_2 = {
   version: '0.0.2';
   config: PromptConfig__chat_prompt__0_0_2;
   type: 'CHAT';
-  variables: PromptVariables__chat_prompt__0_0_2 & PromptVariables__non_chat_prompt__0_0_1;
+  variables: PromptVariables__chat_prompt__0_0_2;
   content: string;
 };
 export type PromptConfig__chat_prompt__0_0_1 = {
